@@ -30,15 +30,16 @@ public class DesafioAtletas {
 		quantidadeAtletas = sc.nextInt();
 		
 		for (int i=1; i<=quantidadeAtletas; i++) {
-			System.out.printf("Digite os dados do atleta numero %d: %n", i);
+			System.out.printf("Digite os dados do atleta numero %d: \n", i);
 			System.out.print("Nome: ");
+			sc.nextLine();
 			nome = sc.nextLine();
 
 			System.out.print("Sexo: ");
 			sexo = sc.next();
 			
 			while(!(sexo.toUpperCase().equals("F")) && !(sexo.toUpperCase().equals("M"))) {
-				System.out.println("Valor invalido! Favor digitar F ou M: ");
+				System.out.print("Valor invalido! Favor digitar F ou M: ");
 				sexo = sc.next();
 			}
 			
@@ -53,7 +54,7 @@ public class DesafioAtletas {
 			}
 			
 			while(altura <= 0) {
-				System.out.println("Valor invalido! Favor digitar um valor positivo: ");
+				System.out.print("Valor invalido! Favor digitar um valor positivo: ");
 				altura = sc.nextDouble();
 			}
 		
@@ -61,7 +62,7 @@ public class DesafioAtletas {
 			peso = sc.nextDouble();
 			
 			while(peso <= 0) {
-				System.out.println("Valor invalido! Favor digitar um valor positivo: ");
+				System.out.print("Valor invalido! Favor digitar um valor positivo: ");
 				peso = sc.nextDouble();
 			}
 			pesoAtletas += peso;
